@@ -9,7 +9,7 @@ playerImage.src = "assets/images/shadow_dog.png";
 const spriteWidth = 575;
 const spriteHeight = 523;
 
-let playerState = 'run';
+let playerState = 'fall';
 
 let gameFrame = 0;
 const adjustFrames = 5;
@@ -25,7 +25,7 @@ const animationStates = [
     frames: 7,
   },
   {
-    name: 'land',
+    name: 'fall',
     frames: 7,
   },
   {
