@@ -9,6 +9,8 @@ playerImage.src = "assets/images/shadow_dog.png";
 const spriteWidth = 575;
 const spriteHeight = 523;
 
+let playerState = 'run';
+
 let gameFrame = 0;
 const adjustFrames = 5;
 
@@ -72,9 +74,9 @@ console.log(spriteAnimations);
 
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  let position = Math.floor(gameFrame / adjustFrames) % spriteAnimations['bite'].loc.length;
+  let position = Math.floor(gameFrame / adjustFrames) % spriteAnimations[playerState].loc.length;
   let frameX = spriteWidth * position;
-  let frameY = spriteAnimations['bite'].loc[position].y;
+  let frameY = spriteAnimations[playerState].loc[position].y;
 
   ctx.drawImage(
     playerImage,
