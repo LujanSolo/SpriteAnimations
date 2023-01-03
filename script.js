@@ -9,7 +9,7 @@ playerImage.src = "assets/images/shadow_dog.png";
 const spriteWidth = 575;
 const spriteHeight = 523;
 
-let playerState = 'fall';
+let playerState = 'idle';
 
 let gameFrame = 0;
 const adjustFrames = 5;
